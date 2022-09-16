@@ -1,0 +1,29 @@
+uuid: 55ffba2a-1933-4756-aaf3-b4407f5d9e4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conference_topics
+    - node.type.ct_conference
+    - taxonomy.vocabulary.tx_conference_topics
+id: node.ct_conference.field_conference_topics
+field_name: field_conference_topics
+entity_type: node
+bundle: ct_conference
+label: 'Conference Topics'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tx_conference_topics: tx_conference_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

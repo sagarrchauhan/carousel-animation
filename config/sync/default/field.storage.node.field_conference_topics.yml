@@ -1,0 +1,20 @@
+uuid: bd504d0a-8e4a-498a-adfb-9cfcac79b72d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_conference_topics
+field_name: field_conference_topics
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

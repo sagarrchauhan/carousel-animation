@@ -1,0 +1,22 @@
+uuid: 93ba65a6-690e-48e7-900e-33d58b5e2d0e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - conference
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: conference_primary_local_tasks
+theme: conference
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

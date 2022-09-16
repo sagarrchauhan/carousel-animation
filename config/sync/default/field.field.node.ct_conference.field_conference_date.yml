@@ -1,0 +1,21 @@
+uuid: 58ce5683-f6c3-4e81-a2df-868e08e23fc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conference_date
+    - node.type.ct_conference
+  module:
+    - datetime
+id: node.ct_conference.field_conference_date
+field_name: field_conference_date
+entity_type: node
+bundle: ct_conference
+label: 'Conference Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,22 @@
+uuid: dcbc73a9-7bd4-4c0d-91a6-e96e0baa7249
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - conference
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: conference_content
+theme: conference
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

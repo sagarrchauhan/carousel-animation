@@ -1,0 +1,23 @@
+uuid: dc9fc583-3682-4cf7-b05f-c86f2c73eb9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ct_conference
+  module:
+    - text
+id: node.ct_conference.body
+field_name: body
+entity_type: node
+bundle: ct_conference
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

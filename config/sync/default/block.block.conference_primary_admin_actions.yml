@@ -1,0 +1,20 @@
+uuid: 7c4c8ebd-c823-4547-b9c5-0618d3c2ca5c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - conference
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: conference_primary_admin_actions
+theme: conference
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

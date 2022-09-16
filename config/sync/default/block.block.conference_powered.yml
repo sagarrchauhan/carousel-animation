@@ -1,0 +1,22 @@
+uuid: 765849ca-7898-4784-9bb1-7c559102a814
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - conference
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: conference_powered
+theme: conference
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

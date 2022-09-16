@@ -1,0 +1,18 @@
+uuid: 1f422a05-0846-48f7-906c-c486cb51e228
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Conference
+type: ct_conference
+description: 'Conference content type for individual conferences'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

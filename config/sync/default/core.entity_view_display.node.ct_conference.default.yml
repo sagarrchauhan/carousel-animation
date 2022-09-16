@@ -1,0 +1,78 @@
+uuid: a8aeb564-8b4c-42b6-abbe-f66a46d90d9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ct_conference.body
+    - field.field.node.ct_conference.field_conference_date
+    - field.field.node.ct_conference.field_conference_topics
+    - field.field.node.ct_conference.field_featured
+    - field.field.node.ct_conference.field_location
+    - field.field.node.ct_conference.field_price
+    - node.type.ct_conference
+  module:
+    - datetime
+    - text
+    - user
+id: node.ct_conference.default
+targetEntityType: node
+bundle: ct_conference
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_conference_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_conference_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_location:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_price:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

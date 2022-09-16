@@ -1,0 +1,25 @@
+uuid: 64b85a38-2f3e-4cd2-b773-016b077f93e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - conference
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: conference_site_branding
+theme: conference
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
