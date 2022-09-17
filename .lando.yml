@@ -3,5 +3,21 @@ recipe: drupal9
 config:
   webroot: web
 services:
+  appserver:
+    build:
+      - composer install
+  pma:
+    type: phpmyadmin
   node:
     type: node:16
+    globals:
+      gulp-cli: latest
+    build:
+      - "cd /app/web/themes/custom/conference && npm install"
+tooling:
+  npm:
+    service: node
+    cmd: "npm"
+  gulp:
+    service: node
+    cmd: "gulp"
