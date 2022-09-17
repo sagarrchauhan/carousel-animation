@@ -3,29 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.ct_conference.body
     - field.field.node.ct_conference.field_conference_date
+    - field.field.node.ct_conference.field_conference_image
     - field.field.node.ct_conference.field_conference_topics
-    - field.field.node.ct_conference.field_featured
+    - field.field.node.ct_conference.field_is_featured
+    - field.field.node.ct_conference.field_is_recommended
     - field.field.node.ct_conference.field_location
     - field.field.node.ct_conference.field_price
     - node.type.ct_conference
   module:
     - datetime
-    - text
     - user
 id: node.ct_conference.default
 targetEntityType: node
 bundle: ct_conference
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
   field_conference_date:
     type: datetime_default
     label: above
@@ -35,6 +28,15 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
+  field_conference_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
   field_conference_topics:
     type: entity_reference_label
     label: above
@@ -43,7 +45,7 @@ content:
     third_party_settings: {  }
     weight: 105
     region: content
-  field_featured:
+  field_is_featured:
     type: boolean
     label: above
     settings:
@@ -51,7 +53,17 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 103
+    weight: 108
+    region: content
+  field_is_recommended:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 107
     region: content
   field_location:
     type: string

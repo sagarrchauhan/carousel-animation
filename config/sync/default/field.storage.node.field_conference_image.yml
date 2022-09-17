@@ -1,17 +1,17 @@
-uuid: 820567fe-4dd4-4f8b-84a4-96482d27f09c
+uuid: 01014da5-387f-44c6-928b-c404d78459b4
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
+    - media
     - node
-id: node.field_conference_date
-field_name: field_conference_date
+id: node.field_conference_image
+field_name: field_conference_image
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: date
-module: datetime
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

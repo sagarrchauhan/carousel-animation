@@ -1,17 +1,15 @@
-uuid: 820567fe-4dd4-4f8b-84a4-96482d27f09c
+uuid: 14162f47-b351-4789-abec-416666619c48
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_conference_date
-field_name: field_conference_date
+id: node.field_is_recommended
+field_name: field_is_recommended
 entity_type: node
-type: datetime
-settings:
-  datetime_type: date
-module: datetime
+type: boolean
+settings: {  }
+module: core
 locked: false
 cardinality: 1
 translatable: true

@@ -10,9 +10,9 @@ id: node.ct_conference.field_conference_topics
 field_name: field_conference_topics
 entity_type: node
 bundle: ct_conference
-label: 'Conference Topics'
+label: Topics
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

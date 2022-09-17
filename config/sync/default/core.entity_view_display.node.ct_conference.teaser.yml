@@ -4,29 +4,21 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.ct_conference.body
     - field.field.node.ct_conference.field_conference_date
+    - field.field.node.ct_conference.field_conference_image
     - field.field.node.ct_conference.field_conference_topics
-    - field.field.node.ct_conference.field_featured
+    - field.field.node.ct_conference.field_is_featured
+    - field.field.node.ct_conference.field_is_recommended
     - field.field.node.ct_conference.field_location
     - field.field.node.ct_conference.field_price
     - node.type.ct_conference
   module:
-    - text
     - user
 id: node.ct_conference.teaser
 targetEntityType: node
 bundle: ct_conference
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -34,7 +26,9 @@ content:
     region: content
 hidden:
   field_conference_date: true
+  field_conference_image: true
   field_conference_topics: true
-  field_featured: true
+  field_is_featured: true
+  field_is_recommended: true
   field_location: true
   field_price: true

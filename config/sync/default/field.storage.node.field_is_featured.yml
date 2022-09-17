@@ -1,11 +1,11 @@
-uuid: 7911c399-df26-4d9b-bfca-5b527b18a25c
+uuid: c6ab6e00-f4b0-488f-99df-8a79c709c42a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_featured
-field_name: field_featured
+id: node.field_is_featured
+field_name: field_is_featured
 entity_type: node
 type: boolean
 settings: {  }

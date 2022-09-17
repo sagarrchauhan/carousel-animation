@@ -1,15 +1,15 @@
-uuid: 356fec7a-2f0c-40fe-966e-9111442ad062
+uuid: 757d3e19-9478-48c4-b97e-54157ac19794
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_featured
+    - field.storage.node.field_is_recommended
     - node.type.ct_conference
-id: node.ct_conference.field_featured
-field_name: field_featured
+id: node.ct_conference.field_is_recommended
+field_name: field_is_recommended
 entity_type: node
 bundle: ct_conference
-label: Featured
+label: Recommended
 description: ''
 required: false
 translatable: false

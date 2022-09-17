@@ -11,7 +11,7 @@ id: node.ct_conference.field_conference_date
 field_name: field_conference_date
 entity_type: node
 bundle: ct_conference
-label: 'Conference Date'
+label: Date
 description: ''
 required: true
 translatable: false

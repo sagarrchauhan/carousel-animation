@@ -1,0 +1,23 @@
+uuid: d712c623-cbcb-4751-addd-60b2ceda3eb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_featured
+    - node.type.ct_conference
+id: node.ct_conference.field_is_featured
+field_name: field_is_featured
+entity_type: node
+bundle: ct_conference
+label: Featured
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
