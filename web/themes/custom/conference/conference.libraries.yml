@@ -1,0 +1,25 @@
+global-styling:
+  css:
+    theme:
+      css/main.css: {}
+  js:
+    js/main.js: {}
+
+slickjs:
+  js:
+    node_modules/slick-carousel/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+
+carousel:
+  js:
+    js/carousel.js: {}
+  dependencies:
+    - core/jquery
+    - conference/slickjs
+
+tabs:
+  js:
+    js/tabs.js: {}
+  dependencies:
+    - core/jquery

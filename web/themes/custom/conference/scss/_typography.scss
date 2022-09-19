@@ -1,0 +1,109 @@
+@use "sass:math";
+
+%carousel-item-title {
+  font-weight: 600;
+  color: $river-bed;
+  font-size: 16px;
+  line-height: #{math.div(20, 16)};
+
+  @include tablet-up {
+    font-size: 18px;
+    line-height: #{math.div(24, 18)};
+  }
+}
+
+%carousel-item-info {
+  font-weight: 600;
+  font-size: 10px;
+  color: $slate-gray;
+  line-height: #{math.div(12, 10)};
+
+  @include tablet-up {
+    font-size: 14px;
+    line-height: #{math.div(14.32, 14)};
+  }
+}
+
+%carousel-item-price {
+  font-weight: 500;
+  font-size: 14px;
+  color: $white;
+}
+
+%carousel-details-link {
+  font-weight: 600;
+  font-size: 16px;
+  color: $lochmara;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $lochmara-2;
+  }
+}
+
+%tabs-title {
+  font-weight: 600;
+  font-size: 12px;
+  color: $lochmara;
+  text-decoration: none;
+  transition: font-size 0.2s ease-in;
+  white-space: break-spaces;
+  line-height: #{math.div(14, 12)};
+
+  @include tablet-up {
+    font-size: 16px;
+  }
+
+  @include desktop-up {
+    font-size: 18px;
+    line-height: #{math.div(20, 18)};
+  }
+}
+
+%tabs-title-selected {
+  color: $river-bed;
+  pointer-events: none;
+  cursor: default;
+  font-size: 12px;
+
+  @include tablet-up {
+    font-size: 16px;
+  }
+
+  @include desktop-up {
+    font-size: 24px;
+  }
+}
+
+%carousel-item-no-img-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: #{math.div(24, 16)};
+  color: $river-bed;
+}
+
+%page-header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: #{math.div(24, 20)};
+  color: $river-bed;
+
+  @include tablet-up {
+    font-size: 36px;
+    line-height: #{math.div(40, 36)};
+  }
+}
+
+%page-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: #{math.div(14, 12)};
+  color: $slate-gray;
+
+  @include tablet-up {
+    font-size: 18px;
+    line-height: #{math.div(40, 18)};
+    color: $slate-gray;
+  }
+}

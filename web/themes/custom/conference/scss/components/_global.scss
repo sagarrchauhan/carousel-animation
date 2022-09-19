@@ -1,0 +1,39 @@
+:root {
+  --scroll-bar-width: 0;
+}
+
+body {
+  color: $slate-gray;
+  font-family: $font-family-montserrat;
+  font-weight: 300;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 1;
+}
+
+h1 {
+  @extend %page-header;
+}
+
+h2 {
+  @extend %page-description;
+}
+
+h3 {
+}
+
+h4 {
+  // @include h-opensans-semibold-17;
+  // color: $chathams-blue;
+  // line-height: 20px;
+}
+
+h5 {
+}
+
+p {
+}
+
+.primary-cta {
+}

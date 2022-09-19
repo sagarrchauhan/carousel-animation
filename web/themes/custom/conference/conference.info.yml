@@ -3,3 +3,5 @@ type: theme
 description: "Theme for conference assignment"
 core_version_requirement: ^8 || ^9
 base theme: stable9
+libraries:
+  - conference/global-styling

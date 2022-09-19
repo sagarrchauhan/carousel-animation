@@ -1,4 +1,418 @@
 .conf-carousel {
-  .conf-carousel {
+  $card-border-radius: 4px;
+  $image-shifting-up: 46px;
+
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+
+  .conf-carousel__container {
+    position: relative;
+  }
+
+  .conf-carousel__wrapper {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 14px;
+
+    @include tablet-up {
+      padding: 0;
+    }
+  }
+
+  .conf-carousel__item {
+    padding: 20px 0;
+
+    @include tablet-up {
+      padding: 20px 14px;
+    }
+  }
+
+  .conf-carousel__item-wrap {
+    border: 1px solid $gallery;
+    border-radius: $card-border-radius;
+    overflow-y: hidden;
+    height: 372px;
+    position: relative;
+    width: calc(100vw - 58px);
+
+    @include desktop-up {
+      width: 362px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 20px 0px $black-20;
+
+      .conf-carousel__bottom-panel {
+        @include desktop-up {
+          bottom: 0;
+        }
+      }
+
+      .conf-carousel__image {
+        @include desktop-up {
+          height: #{200px - $image-shifting-up};
+        }
+
+        img {
+          @include desktop-up {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .conf-carousel__no-img-text {
+        @include desktop-up {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .conf-carousel__image {
+    line-height: 0;
+    transition: height 0.2s ease-in;
+    overflow: hidden;
+
+    @include mobile-up {
+      height: #{200px - $image-shifting-up};
+    }
+
+    @include tablet-up {
+      height: 175px;
+    }
+
+    @include desktop-up {
+      height: 200px;
+    }
+
+    img {
+      border-top-left-radius: $card-border-radius;
+      border-top-right-radius: $card-border-radius;
+      width: 100%;
+      height: auto;
+      transition: transform 0.2s ease-in;
+    }
+  }
+
+  .conf-carousel__title {
+    padding-top: 20px;
+    padding-bottom: 11px;
+
+    @include mobile-up {
+      padding-top: 32px;
+      padding-bottom: 11px;
+    }
+
+    @include tablet-up {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    @extend %carousel-item-title;
+  }
+
+  .conf-carousel__info-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include tablet-up {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  .conf-carousel__topics-wrap {
+    padding-bottom: 10px;
+
+    @include tablet-up {
+      padding-bottom: 15px;
+    }
+  }
+
+  .conf-carousel__topics {
+    position: relative;
+    @extend %carousel-item-info;
+    padding-left: 28px;
+
+    &:before {
+      content: "";
+      background: get_img_file("tags.png");
+      position: absolute;
+      width: 12px;
+      height: 9px;
+      left: 0;
+      top: calc(50% - 4px);
+      @include bg-img-prop;
+
+      @include tablet-up {
+        width: 18px;
+        height: 14px;
+        top: calc(50% - 7px);
+      }
+    }
+  }
+
+  .conf-carousel__date-wrap {
+    padding-bottom: 10px;
+
+    @include tablet-up {
+      padding-bottom: 15px;
+    }
+  }
+
+  .conf-carousel__date {
+    position: relative;
+    @extend %carousel-item-info;
+    padding-left: 28px;
+
+    &:before {
+      content: "";
+      background: get_img_file("calendar.png");
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: 1px;
+      top: calc(50% - 6px);
+      @include bg-img-prop;
+
+      @include tablet-up {
+        width: 16px;
+        height: 16px;
+        top: calc(50% - 8px);
+      }
+    }
+  }
+  .conf-carousel__loc {
+    position: relative;
+    @extend %carousel-item-info;
+    padding-left: 28px;
+
+    &:before {
+      content: "";
+      background: get_img_file("location.png");
+      position: absolute;
+      width: 8px;
+      height: 10px;
+      left: 3px;
+      top: calc(50% - 4px);
+      @include bg-img-prop;
+
+      @include tablet-up {
+        width: 12px;
+        height: 15px;
+        top: calc(50% - 7px);
+      }
+    }
+  }
+
+  .conf-carousel__price {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 62px;
+    height: 28px;
+    border: 1px solid $porcelain;
+    background-color: $black-30;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %carousel-item-price;
+  }
+
+  .conf-carousel__bottom-panel {
+    display: flex;
+    height: 49px;
+    border-top: 1px solid $gallery-2;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $white;
+
+    @include desktop-up {
+      bottom: -50px;
+      transition: bottom 0.2s ease-in;
+    }
+  }
+
+  .conf-carousel__wish,
+  .conf-carousel__download,
+  .conf-carousel__share {
+    flex-basis: 20%;
+    border-right: 1px solid $gallery-2;
+    @include flex-center;
+
+    svg {
+      transform: scale(0.75);
+    }
+
+    @include tablet-up {
+      svg {
+        transform: none;
+      }
+    }
+  }
+
+  .conf-carousel__details {
+    flex-basis: 40%;
+    @include flex-center;
+  }
+
+  .conf-carousel__wish {
+    @include icon-fill(24px, 22px);
+  }
+
+  .conf-carousel__download {
+    @include icon-fill(28px, 21px);
+  }
+
+  .conf-carousel__share {
+    @include icon-fill(22px, 24px);
+  }
+
+  .conf-carousel__details-link {
+    @extend %carousel-details-link;
+  }
+
+  .conf-carousel__no-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    flex-direction: column;
+
+    @include mobile-up {
+      height: #{200px - $image-shifting-up};
+    }
+
+    @include tablet-up {
+      height: 175px;
+    }
+
+    @include desktop-up {
+      height: 200px;
+    }
+
+    img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  .conf-carousel__no-img-text {
+    display: block;
+    padding-top: 10px;
+    @extend %carousel-item-no-img-text;
+    transition: font-size 0.2s ease-in;
+  }
+
+  .conf-carousel__featured {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: $malachite;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    border-top-left-radius: 4px;
+  }
+
+  .conf-carousel__featured-star {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 12px;
+    height: auto;
+  }
+
+  .conf-carousel__arrows {
+    display: none;
+
+    @include desktop-up {
+      display: block;
+    }
+
+    .conf-carousel__arrow-left,
+    .conf-carousel__arrow-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      padding: 0;
+
+      &:hover {
+        svg {
+          fill: $lochmara-3;
+        }
+      }
+
+      svg {
+        display: block;
+        width: 19px;
+        height: 30px;
+        fill: $gray-chateau;
+      }
+
+      &.slick-disabled {
+        display: none !important;
+      }
+    }
+
+    .conf-carousel__arrow-left {
+      left: -30px;
+
+      svg {
+        transform: rotateZ(180deg);
+      }
+
+      @include desktop-md-up {
+        left: -68px;
+      }
+    }
+
+    .conf-carousel__arrow-right {
+      right: -30px;
+
+      @include desktop-md-up {
+        right: -68px;
+      }
+    }
+  }
+
+  .conf-carousel__nav {
+    padding-top: 9px;
+    .slick-dots {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+
+      li {
+        margin-right: 9px;
+
+        &.slick-active {
+          button {
+            background-color: $lochmara;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        button {
+          border: 1px solid $lochmara;
+          border-radius: 50%;
+          background-color: $white;
+          display: flex;
+          width: 20px;
+          height: 20px;
+          padding: 0;
+        }
+      }
+    }
   }
 }

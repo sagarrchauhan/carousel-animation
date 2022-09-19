@@ -1,0 +1,109 @@
+#block-quicktabsconferencetabs {
+  .quicktabs-main {
+    padding-top: 12px;
+    position: relative;
+  }
+
+  .quicktabs-wrapper {
+    width: 100%;
+    max-width: 1170px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .quicktabs-tabs {
+    display: flex;
+
+    li {
+      flex-basis: calc(100% / 3);
+      text-align: center;
+      padding: 0;
+      border-bottom: 2px solid $lochmara;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 58px;
+
+      &:hover,
+      &:focus {
+        background-color: $gallery;
+
+        a {
+          color: $lochmara-2;
+        }
+      }
+
+      &.active {
+        position: relative;
+
+        &:hover,
+        &:focus {
+          background-color: $white;
+
+          a {
+            color: $river-bed;
+          }
+        }
+
+        a {
+          @extend %tabs-title-selected;
+          display: block;
+        }
+
+        &:after {
+          position: absolute;
+          bottom: -8px;
+          left: calc(50% - 7px);
+          border: solid $lochmara;
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 6px;
+          transform: rotate(45deg);
+          background-color: $white;
+          content: " ";
+        }
+      }
+    }
+
+    a {
+      @extend %tabs-title;
+      padding-bottom: 19px;
+
+      @include mobile-up {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @include tablet-up {
+        padding-left: 55px;
+        padding-right: 55px;
+      }
+
+      @include desktop-up {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .quicktabs-animate {
+    animation: slideIn 0.75s;
+  }
+
+  .quicktabs-hide {
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}

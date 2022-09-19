@@ -1,0 +1,15 @@
+.b-page {
+  .b-page__header {
+    text-align: center;
+    padding-bottom: 2px;
+  }
+
+  .b-page__description {
+    text-align: center;
+    padding-bottom: 30px;
+
+    @include tablet-up {
+      padding-bottom: 59px;
+    }
+  }
+}

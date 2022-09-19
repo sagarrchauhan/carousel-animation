@@ -1,0 +1,17 @@
+$container-gutter-sm: 15px;
+$container-gutter-lg: 30px;
+
+%container {
+  margin: 0 auto;
+  position: relative;
+  width: calc(100% - (2 * #{$container-gutter-sm}));
+  max-width: 1306px;
+
+  @include desktop-up {
+    width: calc(100% - (2 * #{$container-gutter-lg}));
+  }
+}
+
+.container {
+  @extend %container;
+}

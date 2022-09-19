@@ -1,0 +1,58 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin icon-fill($width, $height, $fill-normal: $iron, $fill-hover: $lochmara) {
+  button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  .icon {
+    width: $width;
+    height: $height;
+    fill: $fill-normal;
+
+    &:hover {
+      fill: $fill-hover;
+    }
+  }
+}
+
+@mixin bg-img-prop {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin small-mobile {
+  @media screen and (max-width: 411px) {
+    @content;
+  }
+}
+
+@mixin mobile-up {
+  @media screen and (min-width: 412px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-md-up {
+  @media screen and (min-width: 1366px) {
+    @content;
+  }
+}

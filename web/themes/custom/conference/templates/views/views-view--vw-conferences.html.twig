@@ -33,12 +33,33 @@
 {%
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
+		'conf-carousel'
   ]
 %}
+
+{{ attach_library('conference/tabs') }}
+{{ attach_library('conference/carousel') }}
 <div{{attributes.addClass(classes)}}>
-	{% if rows -%}
-		{{ rows }}
-	{% elseif empty -%}
-		{{ empty }}
-	{% endif %}
+	<div class="conf-carousel__container">
+		<div class="conf-carousel__wrapper">
+			{% if rows -%}
+				{{ rows }}
+			{% elseif empty -%}
+				{{ empty }}
+			{% endif %}
+		</div>
+		<div class="conf-carousel__arrows">
+			<button class="conf-carousel__arrow-left">
+				{% include "@conference/miscellaneous/svg.twig" with {
+					icon_name: "arrow"
+				}%}
+			</button>
+			<button class="conf-carousel__arrow-right">
+				{% include "@conference/miscellaneous/svg.twig" with {
+					icon_name: "arrow"
+				}%}
+			</button>
+		</div>
+		<div class="conf-carousel__nav"></div>
+	</div>
 </div>

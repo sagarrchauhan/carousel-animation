@@ -6,7 +6,7 @@ id: qt_conference_tabs
 label: 'Conference Tabs'
 renderer: quick_tabs
 hide_empty_tabs: false
-default_tab: 0
+default_tab: 2
 options:
   quick_tabs:
     ajax: false
@@ -15,7 +15,7 @@ options:
 configuration_data:
   -
     title: 'Featured Conferences'
-    weight: 0
+    weight: -10
     type: block_content
     content:
       block_content:
@@ -38,7 +38,7 @@ configuration_data:
           machine_name: ''
   -
     title: 'Recommended Conferences'
-    weight: 0
+    weight: -9
     type: block_content
     content:
       block_content:
@@ -61,7 +61,7 @@ configuration_data:
           machine_name: ''
   -
     title: 'Past Conferences'
-    weight: 0
+    weight: -8
     type: block_content
     content:
       block_content:

@@ -1,0 +1,8 @@
+<div class="{{ wrapper_class }}">
+	<button {% if condition %} class="{{ button_class }}" {% endif %}>
+		{% include "@conference/miscellaneous/svg.twig" with { 
+      icon_name: icon_name, 
+      icon_class: icon_class  
+    } %}
+	</button>
+</div>

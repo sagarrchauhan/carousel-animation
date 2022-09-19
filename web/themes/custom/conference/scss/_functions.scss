@@ -1,0 +1,4 @@
+@function get_img_file($file-name) {
+  $url: url("../images/#{$file-name}");
+  @return $url;
+}
