@@ -44,4 +44,4 @@ Demo project for the assignment
 ## Assets for the project
 
 - DB for the project can be found in `testing_assets/db`
-- Images used for the project can be found in `testings_assets/images`
+- Images used for the project can be found in `testings_assets/images/files`. These can be copied to `/web/sites/default/files/`.
