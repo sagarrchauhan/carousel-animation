@@ -14,13 +14,13 @@ Demo project for the assignment
 
 ### Add the database
 
-`lando db-import <name_of_db_file.sql.gz>`
+`lando db-import <path_to_db_file.sql.gz>`
 
 ## FE tasks
 
 ### Change directory to the custom theme
 
-`cd docroot/themes/custom/seabond`
+`cd web/themes/custom/conference`
 
 ### After installation run the following:
 

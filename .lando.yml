@@ -13,7 +13,7 @@ services:
     globals:
       gulp-cli: latest
     build:
-      - "cd /app/web/themes/custom/conference && npm install"
+      - "cd /app/web/themes/custom/conference && npm install && gulp"
 tooling:
   npm:
     service: node
